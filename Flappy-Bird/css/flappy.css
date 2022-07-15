@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-Regular.ttf') format('truetype');
+  font-family: 'Pixel';
+  src: url('fontes/Pixel.ttf');
+}
+
+* {
+  font-family: 'Oswald', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  padding-top: 6rem;
+  margin: 0;
+  background-color: #0d262d;
+  color: #fff;
+  height: 100%;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+}
+
+[wm-flappy] {
+  position: relative;
+  border: 5px solid dodgerblue;
+  height: 700px;
+  width: 1200px;
+  margin: 15px;
+  overflow: hidden;
+}
+
+.diurno {
+  background-image: url('../img/diurno.png');
+}
+
+.noturno {
+  background-image: url('../img/noturno.png');
+}
+
+.passaro {
+  position: absolute;
+  width: 60px;
+  left: calc(50% - 30px);
+}
+
+.par-de-barreiras {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.barreira {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barreira .borda {
+  height: 30px;
+  width: 130px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border: 2px solid #000;
+}
+
+/*mudar pra de noite*/
+.barreira .corpo {
+  height: 40px;
+  width: 110px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.progresso {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: Pixel;
+  font-size: 70px;
+  z-index: 100;
+}
+
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+  background: limegreen;
+  color: #eee;
+  min-width: 8rem;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+  transition: 0.1s;
+}
+
+.botao:hover, .botao:focus {
+  outline: none;
+  color: #fff;
+  box-shadow: 0 0 0 3px greenyellow, 0 0 0 4px lawngreen;
+}
+
+.config {
+  padding: 10px 10px;
+  font-weight: bold;
+  border-radius: 5em;
+  color: deepskyblue;
+  background-color: black;
+}
+
+.config:hover {
+  cursor: pointer;
+  color: black;
+  background-color: deepskyblue;
+}
